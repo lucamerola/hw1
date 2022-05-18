@@ -10,14 +10,8 @@
     <title>Home</title>
 </head>
 <body>
-    <div id="div_spotify">
-        <form class="hidden">
-            <div>
-                <input id="track" type="text" value="">
-                <input type="submit" value="cerca">
-            </div>
-        </form>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg">
+    <div id="div-instagram">
+        <a href="https://www.instagram.com/artincocktail/" target="_blank"><img src="img/logo-instagram.png" alt="logo-instagram"></a>
     </div>
     <?php include("menu.html"); ?>
     <article>
@@ -42,9 +36,6 @@
                 <!-- qui vanno le schede-->
             </div>
 
-        </section>
-        <section >
-            <div id="brani-spotify" class="hidden"></div>
         </section>
         <br>
         <footer>
