@@ -6,7 +6,6 @@ let cocktailList=[];
 
 init();
 
-
 function init(){
     ricerca_top_5_cocktail();
 }
