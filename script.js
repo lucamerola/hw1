@@ -49,7 +49,6 @@ async function ricerca_top_5_cocktail(){
 function onJsonCocktail(json){
     cocktailList.push(json);
 }
-
 /*
 Struttura di ogni scheda cocktail
 
