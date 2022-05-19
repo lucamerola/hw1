@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style/hw1.css">
-    <link rel="stylesheet" href="/style/menu.css">
+    <link rel="stylesheet" href="/style/menu2.css">
     <link rel="stylesheet" href="/style/fonts.css">
+    <script src="script-menu.js" defer="true"></script>
     <title>Home</title>
 </head>
 <body>
@@ -14,7 +15,7 @@
         <a href="https://www.instagram.com/artincocktail/" target="_blank"><img src="img/logo-instagram.png" alt="logo-instagram"></a>
     </div>
     <?php include("menu.php"); ?>
-    <article>
+    <article id="contenuto">
             
         <header>
             <div id="container-header">

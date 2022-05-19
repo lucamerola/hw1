@@ -4,9 +4,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style/top-5.css">
-    <link rel="stylesheet" href="/style/menu.css">
+    <link rel="stylesheet" href="/style/menu2.css">
     <link rel="stylesheet" href="/style/fonts.css">
     <script src="script-top-5-cocktail.js" defer="true"></script>
+    <script src="script-menu.js" defer="true"></script>
     <title>Home</title>
 </head>
 <body>

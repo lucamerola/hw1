@@ -8,3 +8,7 @@ body {
     flex-direction: column;
     align-items: center;
 }
+
+#contenuto{
+    margin-top: 10%;
+}

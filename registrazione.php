@@ -66,7 +66,7 @@
 </head>
 <body>
     <?php include("menu.php"); ?>
-    <section>
+    <section id="contenuto">
         <div id="div-registrazione">
             <form name="form-registrazione" method="post">
                 <p>
