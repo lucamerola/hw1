@@ -15,8 +15,8 @@ function validazione(event) {
         event.preventDefault();
         return;
     }
-    if(form.password.value.length<8){
-        alert("Lunghezza password minima 8 caratteri.");
+    if(form.password.value.length<8 || form.password.value.length>30){
+        alert("La password deve avere più di 8 caratteri");
         event.preventDefault();
         return;
     }

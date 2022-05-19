@@ -1,8 +1,3 @@
-@font-face {
-    font-family: "PlayfairDisplay";
-    src: url("./font/PlayfairDisplay-Bold.ttf") format('truetype');
-}
-  
 body {
     margin: 0;
     border: 0;
