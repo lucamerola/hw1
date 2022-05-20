@@ -66,41 +66,46 @@
 </head>
 <body>
     <?php include("menu.php"); ?>
-    <section id="contenuto">
-        <div id="div-registrazione">
-            <form name="form-registrazione" method="post">
-                <p>
-                    <label>Nome <input type="text" name='nome'></label>
-                </p>
-                <p>
-                    <label>Cognome <input type="text" name='cognome'></label>
-                </p>
-                <p>
-                    <label>E-mail <input type="text" name='email'></label>
-                </p>
-                <p>
-                    <label>Password <input type="password" name='password'></label>
-                </p>
-                <p>
-                    <label>Ripeti Password <input type="password" name='ripetiPassword'></label>
-                </p>
-                <p>
-                    <label>&nbsp <input type="submit"></label>
-                </p>
-            </form>
-        </div>
-        <?php
-            if(isset($error)){
-                foreach($error as $errore){
-                    echo ("<p class=\"error\"> $errore</p>");
-                }                                
-            }
-            if(isset($notice)){
-                foreach($notice as $note){
-                    echo ("<p class=\"note\">$note</p>");
-                }                                
-            }
-        ?>
-    </section>
+    <article>
+        <section id="contenuto">
+            <div id="contenuto-header">
+                <h2>Registrazione</h2>
+            </div>
+            <div id="div-registrazione">
+                <form name="form-registrazione" method="post">
+                    <p>
+                        <label>Nome <input type="text" name='nome'></label>
+                    </p>
+                    <p>
+                        <label>Cognome <input type="text" name='cognome'></label>
+                    </p>
+                    <p>
+                        <label>E-mail <input type="text" name='email'></label>
+                    </p>
+                    <p>
+                        <label>Password <input type="password" name='password'></label>
+                    </p>
+                    <p>
+                        <label>Ripeti Password <input type="password" name='ripetiPassword'></label>
+                    </p>
+                    <p>
+                        <label>&nbsp <input type="submit"></label>
+                    </p>
+                </form>
+            </div>
+            <?php
+                if(isset($error)){
+                    foreach($error as $errore){
+                        echo ("<p class=\"error\"> $errore</p>");
+                    }                                
+                }
+                if(isset($notice)){
+                    foreach($notice as $note){
+                        echo ("<p class=\"note\">$note</p>");
+                    }                                
+                }
+            ?>
+        </section>
+    </article>
 </body>
 </html>

@@ -26,7 +26,7 @@
                         $elements = "<a href='/logout.php'>Logout</a>";
                     }
                     else{
-                        $elements = "<a href='/registrazione.php'>Registrati</a>";
+                        $elements = "<a href='/accedi.php'>Accedi</a><a href='/registrazione.php'>Registrati</a>";
                     }
                     echo $elements;
                 ?>
@@ -40,7 +40,7 @@
 
     <nav id="central-bar">
         <div id="div-open-menu">
-            <img src="img/hamburger.png" alt="img-hamburger">
+            <img src="img/hamburger2.png" alt="img-hamburger">
         </div>
         <div id="title-central-bar">
             <a href="/"><h1>ArtInCocktail</h1></a>

@@ -10,17 +10,23 @@ function nascondi_lateral_menu(event){
     var nav_bar = document.querySelector("#nav-bar");
     nav_bar.classList.remove("flex");
     nav_bar.classList.add("hidden");
+    var article = document.getElementsByTagName("article")[0];
+    article.style.opacity = "1";
 }
 
 function mostra_lateral_menu(event){
     var nav_bar = document.querySelector("#nav-bar");
     nav_bar.classList.remove("hidden");
     nav_bar.classList.add("flex");
+    var article = document.getElementsByTagName("article")[0];
+    article.style.opacity = "0.5";
+    
 }
 
 function mostra_tendina(event){
     var tendina = document.querySelector("#menu-tendina");
     tendina.classList.remove("hidden");
+    tendina.classList.add("flex");
     var menu = document.querySelector("#div-user");
     menu.removeEventListener('click', mostra_tendina);
     menu.addEventListener('click', nascondi_tendina);
@@ -28,6 +34,7 @@ function mostra_tendina(event){
 
 function nascondi_tendina(event){
     var tendina = document.querySelector("#menu-tendina");
+    tendina.classList.remove("flex");
     tendina.classList.add("hidden");
     var menu = document.querySelector("#div-user");
     menu.removeEventListener('click', nascondi_tendina);
