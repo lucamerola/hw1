@@ -89,7 +89,6 @@ function onJSON_Filter(json){
     lista_cocktail_ricercati.innerHTML="";
     for(drink of json){
         let div_scheda = document.createElement('div');
-        console.log(drink);
         div_scheda.classList="scheda";
         div_scheda.dataset.cardDrink=drink.strDrink.replace(" ","_");
         div_scheda.dataset.cardId=drink.idDrink;

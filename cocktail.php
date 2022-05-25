@@ -7,7 +7,11 @@ curl_setopt($ch, CURLOPT_URL, $url);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 $result=curl_exec($ch);
 if ($result == false){
-    die("Errore cURL: ".curl_error($ch));
+    $response=array();
+    $response['error']=true;
+    $response['errorType']="cURL Error: ".curl_error($ch);
+    echo json_encode($response);
+    exit;
 }
 curl_close($ch);
 //echo ($result);
