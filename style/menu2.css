@@ -105,6 +105,7 @@ a:hover{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 1;
 }
 
 #title-central-bar{
@@ -140,4 +141,25 @@ a:hover{
 
 .flex{
     display: flex;
+}
+
+@media(max-width: 450px) {
+    #div-close{
+        width: 5.5vw;
+    }
+    a{
+        font-size: 5vw;
+    }
+    #nav-bar{
+        width: 40%;
+    }
+    #title-central-bar a h1{
+        font-size: 7vw;
+    }
+    #nav-bar #title a h3{
+        font-size: 7vw;
+    }
+    #div-open-menu{
+        width: 7vw;
+    }
 }

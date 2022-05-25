@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style/hw1.css">
-    <link rel="stylesheet" href="/style/menu2.css">
-    <link rel="stylesheet" href="/style/fonts.css">
+    <link rel="stylesheet" href="/style/hw1.css?v=<?php echo time();?>">
+    <link rel="stylesheet" href="/style/menu2.css?v=<?php echo time();?>">
+    <link rel="stylesheet" href="/style/fonts.css?v=<?php echo time();?>">
     <script src="script-menu.js" defer="true"></script>
+    <script src="script-index.js" defer="true"></script>
     <title>Home</title>
 </head>
 <body>
@@ -26,19 +27,17 @@
                 <img id="img-header" src="./img/img-header.png" alt="img-header">
             </div>
         </header>
+        <section>
+            <div id="lista-cocktail">
+                
+            </div>
+        </section>
         <br>
         <footer>
             <h3 class="Autore">
                 Nome: Luca Merola 
                 <br>
                 Matricola: O46002231
-                <?php
-                    if(isset($error)){
-                        foreach($error as $errore){
-                            echo ("<p class=\"error\"> $errore</p>");
-                        }                                
-                    }
-                ?>
             </h3>
         </footer>
     </article>

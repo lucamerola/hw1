@@ -8,11 +8,7 @@
         </div>
         <div id="menu-bar">
             <a href="/">Home</a>
-            <a href="#">Ricette</a>
-            <a href="#">Mixology</a>
-            <a href="/top-5.php">Top 5</a>
-            <a href="#">News</a>
-            <a href="#">Contatti</a>
+            <a href="/preferiti.php">Preferiti</a>
         </div>
         <div id="div-user">
             <div id="div-avatar">
