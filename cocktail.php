@@ -34,7 +34,6 @@ if(checkAuth()){
             $maxJ=count($drinks_code);
             for($j=0;$j<$maxJ;$j++){
                 if($drinks_code[$j]==$list_drinks_API[$i]['idDrink']){
-                    $like['like']=true;
                     $list_drinks_API[$i]['like']=true;
                 }
             }
@@ -47,30 +46,4 @@ for($i=0;$i<12;$i++){
     array_push($my_drinks_List, $list_drinks_API[$i]);
 }
 echo json_encode($my_drinks_List);
-
-function aggiungi_like_utente($list_drinks_API){
-    $conn = mysqli_connect($db['host'], $db['user'], $db['password'], $db['name']) or die (mysqli_error($conn));
-    $email=$_SESSION['email'];
-    echo "ciao";
-    $query="SELECT cod_drink FROM like_drink WHERE cod_utente = (SELECT id FROM utenti WHERE email='$email')";
-    $res = mysqli_query($conn, $query);
-    $drinks_code=array();
-    if(mysqli_num_rows($res) > 0){
-        while($cod_drink = mysqli_fetch_assoc($res)['cod_drink']){
-            $drinks_code[]=$cod_drink;
-        }
-        mysqli_close($conn);
-    }else{
-        mysqli_close($conn);
-        return;
-    }
-    for($i=0;$i<12;$i++){
-        $maxJ=count($drinks_code);
-        for($j=0;$j<$maxJ;$j++){
-            if($drinks_code==$list_drinks_API[$i].idDrink){
-                array_push($list_drinks_API[$i], "like: true");
-            }
-        }
-    }
-}
 ?>

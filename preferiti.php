@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style/hw1.css?v=<?php echo time();?>">
+    <link rel="stylesheet" href="/style/preferiti.css?v=<?php echo time();?>">
     <link rel="stylesheet" href="/style/menu2.css?v=<?php echo time();?>">
     <link rel="stylesheet" href="/style/fonts.css?v=<?php echo time();?>">
     <script src="script-menu.js" defer="true"></script>
@@ -21,20 +21,14 @@
         <header>
             <div id="container-header">
                 <div id="text-box-header">
-                    <h2>Home</h2>
+                    <h2>Preferiti</h2>
                 </div>
                 <div id="overlay"></div>
                 <img id="img-header" src="./img/img-header.png" alt="img-header">
             </div>
         </header>
         <section>
-            <div id="div-ricerca">
-                <label>Ricerca <input type="text" id='ricerca'></label>
-            </div>
-            <div id="lista-cocktail-ricercati" class="hidden">
-
-            </div>
-            <div id="lista-cocktail" class="visible-flex">
+            <div id="lista-cocktail-preferiti">
                 
             </div>
         </section>

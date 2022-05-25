@@ -81,16 +81,8 @@ section{
     margin-left: 3%;
 }
 
-
-#lista-cocktail{
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 10px;
-}
-
-#lista-cocktail-ricercati{
+#lista-cocktail-preferiti{
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
