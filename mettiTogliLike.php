@@ -1,13 +1,21 @@
 <?php
     include 'auth.php';
+    header('Content-Type: application/json');
     if(!checkAuth()){
+        $response=array();
+        $response['error']=true;
+        $response['errorType']="Non hai effettuato il login";
+        echo json_encode($response);
         exit;
     }
     $idDrinkLike=$_GET['drinkId'];
     if(!$idDrinkLike){
+        $response=array();
+        $response['error']=true;
+        $response['errorType']="Non è presente il drink";
+        echo json_encode($response);
         exit;
     }
-    header('Content-Type: application/json');
     $conn = mysqli_connect($db['host'], $db['user'], $db['password'], $db['name']) or die (mysqli_error($conn));
     $email=$_SESSION['email'];
     $query="SELECT cod_drink FROM like_drink WHERE cod_utente = (SELECT id FROM utenti WHERE email='$email')";
@@ -31,6 +39,7 @@
                     $response=array();
                     $response['drinkId']=$idDrinkLike;
                     $response['error']=true;
+                    $response['errorType']="Non è stato possibile togliere il like";
                     echo json_encode($response);
                     exit;
                 }
@@ -54,6 +63,7 @@
         $response=array();
         $response['drinkId']=$idDrinkLike;
         $response['error']=true;
+        $response['errorType']="Non è stato possibile inserire il like";
         echo json_encode($response);
         exit;
     }

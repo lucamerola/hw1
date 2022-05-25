@@ -16,14 +16,17 @@ function onJSON(json){
         let img_like = document.createElement('img');
         img_like.classList="img-like";
         img_like.alt="img-like";
-        if(drink.like!==undefined && drink.like===true){
-            img_like.src="/img/like.png";
-            img_like.addEventListener('click', togliLike);
-        }
-        else{
+        img_like.addEventListener('click', mettiTogliLike);
+        if ("like" in drink){
+            if(drink.like===true){
+                img_like.src="/img/like.png";
+            }
+        }else{
             img_like.src="/img/dislike.png";
-            img_like.addEventListener("click", mettiLike);
         }
+       /* if(drink.like!==undefined && drink.like===true){
+            
+        }*/
         console.log(drink);
         let div_titolo_scheda = document.createElement('div');
         div_titolo_scheda.classList="titolo-scheda";
@@ -57,28 +60,23 @@ Struttura di ogni scheda cocktail
 */
 
 function onJSON_Like(json){
-    /*if(json.like===1){
-        //const img_like=document.querySelector('[data-card-id='+json.drinkId+']');
-        console.log('[data-card-id='+json.drinkId+']');
-    }*/
+    if("error" in json){
+        console.log(json.errorType);
+        return;
+    }
     const div_img_like = document.querySelector("[data-card-id='"+json.drinkId+"']");
     const img_like=div_img_like.childNodes[2].childNodes[0];
-    if(json.like===true){
-        img_like.src="/img/like.png";
-    }
-    else{
-        img_like.src="/img/dislike.png";
-    }
-    if(json.error===true){
-        console.log("Si è verificato un errore nel like");
+    if("like" in json){
+        if(json.like===true){
+            img_like.src="/img/like.png";
+        }
+        else{
+            img_like.src="/img/dislike.png";
+        }
     }
 }
 
-function mettiLike(event){
-    const drink_target = event.target.parentElement.parentElement.dataset.cardId;
-    fetch("http://localhost/mettiTogliLike.php?drinkId="+drink_target).then(onResponseJSON).then(onJSON_Like);
-}
-function togliLike(event){
+function mettiTogliLike(event){
     const drink_target = event.target.parentElement.parentElement.dataset.cardId;
     fetch("http://localhost/mettiTogliLike.php?drinkId="+drink_target).then(onResponseJSON).then(onJSON_Like);
 }
