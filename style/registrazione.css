@@ -11,3 +11,9 @@ body {
 article{
     margin-top: 10%;
 }
+
+@media(max-width: 650px) {
+    article{
+        margin-top: 20%;
+    }
+}

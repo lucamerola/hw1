@@ -11,11 +11,6 @@ body {
 
 article{
     width: 100%;
-    margin-top: 40px;
-}
-
-#contenuto{
-    margin-top: 0%;
 }
 
 header{
@@ -182,23 +177,14 @@ a{
     #text-box-header h2{
         font-size: 5vw;
     }
-    #titolo-articolo{
-        font-size: 3vw;
-    }
     .titolo-scheda{
         font-size: 4vw;
     }
     .img-scheda{
         width: 80%;
-        position: relative;
-        left: 10%;
-    }
-    #lista-schede{
-        flex-direction: column;
-        justify-content: center;
     }
     .scheda{
-        width: 50%;
+        width: 40%;
     }
     #div-instagram img{
         width: 10vw;
@@ -207,9 +193,9 @@ a{
 
 @media(max-width: 450px) {
     .scheda{
-        width: 60%;
+        width: 50%;
     }
     #div-instagram img{
-        width: 12vw;
+        width: 15vw;
     }
 }

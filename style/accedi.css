@@ -12,3 +12,9 @@ body {
 #contenuto{
     margin-top: 10%;
 }
+
+@media(max-width: 650px) {
+    #contenuto{
+        margin-top: 20%;
+    }
+}
