@@ -15,8 +15,26 @@ function validazione(event) {
         event.preventDefault();
         return;
     }
-    if(form.password.value.length<8 || form.password.value.length>30){
-        alert("La password deve avere più di 8 caratteri");
+    const pattern = /^[ a-z A-Z]{2,50}$/;
+    if(!form.nome.value.match(pattern)){
+        alert("Il nome deve essere composto dai 2 ai 50 caratteri a-z A-Z");
+        event.preventDefault();
+        return;
+    }
+    if(!form.cognome.value.match(pattern)){
+        alert("Il cognome deve essere composto dai 2 ai 50 caratteri a-z A-Z");
+        event.preventDefault();
+        return;
+    }
+    pattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    if(!form.email.value.match(pattern)){
+        alert("Inserisci una mail valida");
+        event.preventDefault();
+        return;
+    }
+    pattern = /^[ a-z A-Z 0-9]{8,100}$/;
+    if(!form.password.value.match(pattern)){
+        alert("La password deve contenere lettere maiuscole/minuscole e numeri, e deve essere composta dai 8 ai 100 caratteri");
         event.preventDefault();
         return;
     }
