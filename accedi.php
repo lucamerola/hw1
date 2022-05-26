@@ -52,7 +52,7 @@
     <link rel="stylesheet" href="/style/menu2.css">
     <link rel="stylesheet" href="/style/fonts.css">
     <link rel="stylesheet" href="/style/accedi.css">
-    <script src="script-menu.js" defer="true"></script>
+    <script src="/script/script-menu.js" defer="true"></script>
     <title>Accesso</title>
 </head>
 <body>

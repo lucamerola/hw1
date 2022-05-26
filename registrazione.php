@@ -60,8 +60,8 @@
     <link rel="stylesheet" href="/style/menu2.css">
     <link rel="stylesheet" href="/style/registrazione.css">
     <link rel="stylesheet" href="/style/fonts.css">
-    <script src="script-registrazione.js" defer="true"></script>
-    <script src="script-menu.js" defer="true"></script>
+    <script src="/script/script-registrazione.js" defer="true"></script>
+    <script src="/script/script-menu.js" defer="true"></script>
     <title>Registrazione</title>
 </head>
 <body>

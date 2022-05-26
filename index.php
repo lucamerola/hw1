@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="/style/hw1.css?v=<?php echo time();?>">
     <link rel="stylesheet" href="/style/menu2.css?v=<?php echo time();?>">
     <link rel="stylesheet" href="/style/fonts.css?v=<?php echo time();?>">
-    <script src="script-menu.js" defer="true"></script>
-    <script src="script-index.js" defer="true"></script>
+    <script src="/script/script-menu.js" defer="true"></script>
+    <script src="/script/script-index.js" defer="true"></script>
     <title>Home</title>
 </head>
 <body>

@@ -16,7 +16,20 @@
         echo json_encode($response);
         exit;
     }
+    // se non riesco a convertire la stringa come intero
+    // vuol dire che si sta tentando di inserire qualcosa
+    // di diverso dal normale
+    // l'id del drink deve essere un intero
+    if(!intval($idDrinkLike)){
+        $response=array();
+        $response['value']=$idDrinkLike;
+        $response['error']=true;
+        $response['errorType']="Stai inserendo qualcosa di strano";
+        echo json_encode($response);
+        exit;
+    }
     $conn = mysqli_connect($db['host'], $db['user'], $db['password'], $db['name']) or die (mysqli_error($conn));
+    $idDrinkLike=mysqli_real_escape_string($conn, strtolower($idDrinkLike));
     $email=$_SESSION['email'];
     $query="SELECT cod_drink FROM like_drink WHERE cod_utente = (SELECT id FROM utenti WHERE email='$email')";
     $res = mysqli_query($conn, $query);
